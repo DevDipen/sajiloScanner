@@ -1,0 +1,140 @@
+/* src/ScannerPage.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.scanner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  padding: 20px;
+}
+
+.scanner-content {
+  text-align: start;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.scanner-content h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.scanner-box {
+  width: 100%;
+  border: 2px solid #4e54c8;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.scanned-data {
+  margin-top: 20px;
+  color: #333;
+  font-size: 16px;
+  word-wrap: break-word;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.scan-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4e54c8;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.scan-button:hover {
+  background-color: #3d41a7;
+}
+
+.scan-button:active {
+  background-color: #2e3088;
+}
+
+.update-button {
+  background-color: #4caf50; /* Green color */
+  color: white;
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 15px; /* Add some spacing at the top */
+}
+
+.update-button:hover {
+  background-color: #45a049; /* Slightly darker green */
+  transform: translateY(-2px); /* Lift the button */
+}
+
+.update-button:active {
+  background-color: #3d8b40; /* Even darker green */
+  transform: translateY(0); /* Return to normal */
+}
+
+
+.logout-button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: #4e54c8;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #3d41a7;
+}
+
+.logout-button:active {
+  background-color: #2e3088;
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+  .scanner-content {
+    padding: 20px;
+  }
+
+  .scanner-content h2 {
+    font-size: 20px;
+  }
+
+  .scanned-data,
+  .logout-button {
+    font-size: 16px;
+  }
+}

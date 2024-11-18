@@ -1,0 +1,117 @@
+/* src/LoginPage.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(
+      to right,
+      rgba(78, 84, 200, 0.062),
+      rgba(143, 148, 251, 0.8)
+    ),
+    url("./nilotpal-kalita-24vPDG707eM-unsplash.jpg") center/cover no-repeat;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.login-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: blur(8px);
+  z-index: 1;
+}
+
+.login-form {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-form h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #4e54c8;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4e54c8;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #3d41a7;
+}
+
+.login-button:active {
+  background-color: #2e3088;
+}
+
+/* Error Message Styling */
+.error-message {
+  color: #ff4d4d;
+  font-size: 16px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+  .login-form {
+    padding: 20px;
+  }
+
+  .login-form h2 {
+    font-size: 20px;
+  }
+
+  .login-input,
+  .login-button {
+    font-size: 16px;
+  }
+}

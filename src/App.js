@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useEffect, useState  } from "react"
+
+import {
+  Route,
+  Routes,
+  Navigate,
+  useNavigate
+} from "react-router-dom"
+import LoginPage from "./LoginPage"
+import ScannerPage from "./ScannerPage"
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const navigate = useNavigate()
+
+  // useEffect(()=>{
+  //   const user = localStorage.getItem("user")
+  //   console.log(user)
+  //   console.log(user === "isAuthenticated")
+  //   if(user && user === "isAuthenticated"){
+  //     setIsAuthenticated(()=>{
+  //       navigate("/scanner")
+  //       return true
+  //     })
+
+  //   }
+  // // eslint-disable-next-line
+  // },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    
+      <Routes>
+        <Route
+          path='/'
+          element={<LoginPage setIsAuthenticated={setIsAuthenticated} />}
+        />
+
+        <Route
+          path='/scanner'
+          element={
+            // isAuthenticated ? (
+              <ScannerPage setIsAuthenticated={setIsAuthenticated} />
+             // ) : (
+            //   <Navigate to='/' replace />
+            // )
+          }
+        />
+      </Routes>
+  )
 }
 
-export default App;
+export default App
